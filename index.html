@@ -63,6 +63,7 @@
 
         .game-button:active {
             transform: scale(0.95);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
         }
 
         .highlight {
@@ -205,6 +206,21 @@
             }, 800);
         }
 
+        document.querySelectorAll(".game-button").forEach(button => {
+            // Handle both touch and click events
+            button.addEventListener("click", handleButtonClick);
+            button.addEventListener("touchstart", handleButtonClick);
+        });
+
+        function handleButtonClick(e) {
+            // Prevent double triggering on mobile touch events
+            e.preventDefault();
+
+            const color = e.target.id;
+            userSequence.push(color);
+            checkSequence();
+        }
+
         function highlightButton(color) {
             const button = document.getElementById(color);
             button.classList.add("highlight");
@@ -256,6 +272,7 @@
             document.getElementById("popup").style.display = "none";
             startGame();
         });
+
     </script>
 </body>
 
