@@ -20,7 +20,7 @@ A fun and interactive memory game built using **HTML, CSS (Tailwind), and JavaSc
 
 ## 🚀 Demo
 
-🔗 **[Live Demo](https://nyxtheeranut.github.io/Memory-Game/)** *(If deployed on GitHub Pages)*
+🔗 **[Live Demo](https://nyxtheeranut.github.io/Memory-Game/)**
 
 ## 🛠️ Technologies Used
 
